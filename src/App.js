@@ -6,14 +6,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import TinderCards from "./TinderCards";
 import SwipeButtons from "./SwipeButtons";
 import Chats from "./Chats";
+import ChatScreen from "./ChatScreen";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/profile">
-            <h1>I am at profile page</h1>
+          <Route path="/chat/:person">
+          <Header backButton="/chat" />
+            <ChatScreen />
           </Route>
           <Route path="/chat">
             <Header backButton="/" />
